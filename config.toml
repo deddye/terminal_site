@@ -44,4 +44,4 @@ menu_items = [
 ]
 
 #main_only, page_only, combined
-page_titles = "main_only"
+page_titles = "page_only"
