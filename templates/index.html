@@ -47,11 +47,7 @@
                 <a href="{{ logo_link | safe }}" style="text-decoration: none;">
                     <div class="logo">
                       {% block logo_content %}
-                        {%- if config.extra.logo_text %}
                             {{ config.extra.logo_text }}
-                        {% else %}
-                            Terminimal theme
-                        {% endif -%}
                         {% endblock logo_content %}
                     </div>
                 </a>
@@ -64,8 +60,18 @@
     </header>
     {% endblock header %}
 
-    <div class="content">
+    <div class="content" style="flex-direction: column;">
+     
         {% block content %}
+          
+        <div>
+            <h1> How in the world did you stumble across this site??!</h1>
+            <h3>Well.... since you're here</h3>
+            <img src="sharpe.JPG" style="margin: auto; display: block; padding-right: 1.5rem;" alt="I I I be poppin bottles"> 
+        </div>
+        <div>
+            <h4>Add some more intro</h4>
+        </div>
         <div class="posts">
             {%- if paginator %}
                 {%- set show_pages = paginator.pages -%}
@@ -80,26 +86,7 @@
                     {{ post_macros::content(page=page, summary=true, show_only_description=page.extra.show_only_description | default(value=false)) }}
                 </div>
             {% endfor -%}
-            <div class="pagination">
-                <div class="pagination__buttons">
-                {%- if paginator.previous %}
-                    <span class="button previous">
-                        <a href="{{ paginator.previous | safe }}">
-                            <span class="button__icon">←</span>&nbsp;
-                            <span class="button__text">Newer posts</span>
-                        </a>
-                    </span>
-                {% endif -%}
-                {%- if paginator.next %}
-                    <span class="button next">
-                        <a href="{{ paginator.next | safe }}">
-                            <span class="button__text">Older posts</span>&nbsp;
-                            <span class="button__icon">→</span>
-                        </a>
-                    </span>
-                {% endif -%}
-                </div>
-            </div>
+                
         </div>
         {% endblock content %}
     </div>
@@ -133,8 +120,7 @@
     {% endblock footer %}
 
 </div>
-{%- block extra_body %}
-{% endblock extra_body -%}
+
 </body>
 
 </html>

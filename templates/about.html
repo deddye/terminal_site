@@ -11,5 +11,6 @@
         {% set section = get_section(path="_index.md") %}
 
         {{ post_macros::list_posts(pages=section.pages) }}
+        <div>We can put some about here</div>
     </div>
 {% endblock content %}
