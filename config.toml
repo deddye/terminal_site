@@ -40,7 +40,8 @@ menu_items = [
     { name = "About", url = "$BASE_URL/about" },
 
     # set newtab to true to make the link open in new tab
-    { name = "github", url = "https://github.com/deddye", newtab = true },
+    { name = "GitHub", url = "https://github.com/deddye", newtab = true },
+    { name = "LinkedIn", url = "https://www.linkedin.com/in/david-dye-cs22/", newtab = true },
 ]
 
 #main_only, page_only, combined
